@@ -1,0 +1,22 @@
+.footerBg {
+  background: linear-gradient(
+    225.52deg,
+    #271a00 0.45%,
+    rgba(0, 0, 0, 0.982162) 45.25%
+  );
+}
+
+.imageOverlay {
+  background: linear-gradient(
+    198.73deg,
+    rgba(0, 0, 0, 0.0001) 15.31%,
+    rgba(0, 0, 0, 0.837986) 67.37%
+  );
+}
+.headerGradient {
+  background: linear-gradient(
+    225.52deg,
+    #271a00 0.45%,
+    rgba(0, 0, 0, 0.982162) 100.47%
+  );
+}
