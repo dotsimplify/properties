@@ -2,7 +2,7 @@ import React from "react";
 /* import SeoHeadTags from "../components/SeoHeadTags";
 import { seo } from "../usefulSeo"; */
 import { RiFlashlightLine } from "react-icons/ri";
-import SeoHeadTags from "../Components/SeoHeadTags";
+import SeoHeadTags from "../components/SeoHeadTags";
 import { seo } from "../usefulSEO";
 
 const About = () => {

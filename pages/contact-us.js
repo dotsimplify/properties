@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import SeoHeadTags from "../Components/SeoHeadTags";
+import SeoHeadTags from "../components/SeoHeadTags";
 import { seo } from "../usefulSEO";
 /* import Modal from "../components/Modal"; */
 /* import SeoHeadTags from "../components/SeoHeadTags";
@@ -72,22 +72,22 @@ const Contact = () => {
         description={seo.contact.description}
         keyword={seo.contact.keyword}
       />
-      <div className=" pt-32 px-2 md:px-4 lg:px-6 xl:px-8">
+      <div className="px-2 pt-32  md:px-4 lg:px-6 xl:px-8">
         {/* <Modal isOpen={phoneError} setIsOpen={setPhoneError} /> */}
-        <div className=" flex flex-col justify-center items-center">
-          <h1 className=" font-bold text-3xl text-gray-800">Contact Us</h1>
-          <h1 className=" text-gray-700 text-lg  px-40 pt-8">
+        <div className="flex flex-col items-center justify-center ">
+          <h1 className="text-3xl font-bold text-gray-800 ">Contact Us</h1>
+          <h1 className="px-40 pt-8 text-lg text-gray-700 ">
             Say Hello send us your thoughts about our products or share
           </h1>
-          <h1 className=" text-gray-700 text-lg  px-40 ">
+          <h1 className="px-40 text-lg text-gray-700 ">
             your ideas with our Team!
           </h1>
         </div>
         <form /* onSubmit={OnSubmit} */ method="post">
-          <div className=" xl:mx-56 xl:space-y-12 py-20">
-            <div className=" flex flex-col md:flex-row justify-center items-center md:space-y-0  md:space-x-14 space-y-12 xl:space-x-28 ">
+          <div className="py-20  xl:mx-56 xl:space-y-12">
+            <div className="flex flex-col items-center justify-center space-y-12  md:flex-row md:space-y-0 md:space-x-14 xl:space-x-28">
               <input
-                className=" outline-none border-b transition-all duration-500 ease-in-out focus:pl-2 pl-1 border-gray-300 w-full py-1"
+                className="w-full py-1 pl-1 transition-all duration-500 ease-in-out border-b border-gray-300 outline-none  focus:pl-2"
                 placeholder="Full name"
                 required
                 onChange={(e) => {
@@ -96,7 +96,7 @@ const Contact = () => {
                 value={fullName}
               />
               <input
-                className=" outline-none border-b transition-all duration-500 ease-in-out focus:pl-2 pl-1 border-gray-300 w-full py-1"
+                className="w-full py-1 pl-1 transition-all duration-500 ease-in-out border-b border-gray-300 outline-none  focus:pl-2"
                 placeholder="Phone"
                 required
                 type="number"
@@ -107,9 +107,9 @@ const Contact = () => {
                 value={phone}
               />
             </div>
-            <div className=" flex flex-col md:flex-row justify-center items-center space-y-12 md:space-y-0  mt-12 md:space-x-14 xl:space-x-28 ">
+            <div className="flex flex-col items-center justify-center mt-12 space-y-12  md:flex-row md:space-y-0 md:space-x-14 xl:space-x-28">
               <input
-                className=" outline-none border-b transition-all duration-500 ease-in-out focus:pl-2 pl-1 border-gray-300 w-full py-1"
+                className="w-full py-1 pl-1 transition-all duration-500 ease-in-out border-b border-gray-300 outline-none  focus:pl-2"
                 placeholder="Email"
                 type="email"
                 required
@@ -119,12 +119,12 @@ const Contact = () => {
                 value={email}
               />
               <input
-                className=" outline-none border-b transition-all duration-500 ease-in-out focus:pl-2 pl-1 border-gray-300 w-full py-1"
+                className="w-full py-1 pl-1 transition-all duration-500 ease-in-out border-b border-gray-300 outline-none  focus:pl-2"
                 placeholder="Subject"
               />
             </div>
             <textarea
-              className=" outline-none border-b resize-none mt-12 transition-all duration-500 ease-in-out focus:pl-2 pl-1 border-gray-300 w-full py-1"
+              className="w-full py-1 pl-1 mt-12 transition-all duration-500 ease-in-out border-b border-gray-300 outline-none resize-none  focus:pl-2"
               placeholder="Message"
               required
               onChange={(e) => {
@@ -132,10 +132,10 @@ const Contact = () => {
               }}
               value={message}
             />
-            <div className=" w-full mt-12 md:px-32 xl:px-56">
+            <div className="w-full mt-12  md:px-32 xl:px-56">
               <button
                 type="submit"
-                className=" py-2 px-4 bg-buttonColor text-white font-semibold w-full transition-all duration-300 ease-in-out rounded-md hover:bg-transparent hover:text-buttonColor border-2 border-buttonColor"
+                className="w-full px-4 py-2 font-semibold text-white transition-all duration-300 ease-in-out border-2 rounded-md  bg-buttonColor hover:bg-transparent hover:text-buttonColor border-buttonColor"
               >
                 {loading && !res
                   ? "Sending ..."

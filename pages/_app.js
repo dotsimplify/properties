@@ -1,5 +1,5 @@
-import Footer from "../Layouts/Footer";
-import Header from "../Layouts/Header";
+import Footer from "../layouts/Footer";
+import Header from "../layouts/Header";
 import "../styles/globals.css";
 
 function MyApp({ Component, pageProps }) {
