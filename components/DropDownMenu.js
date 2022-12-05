@@ -55,7 +55,10 @@ const DropDownMenu = () => {
             {locationData &&
               locationData.length > 0 &&
               locationData.map((item, index) => (
-                <h1 className="py-2 text-sm transition-all duration-300 ease-in-out md:px-12 md:text-base hover:bg-yellow-500 hover:text-white">
+                <h1
+                  key={index}
+                  className="py-2 text-sm transition-all duration-300 ease-in-out md:px-12 md:text-base hover:bg-yellow-500 hover:text-white"
+                >
                   {item}
                 </h1>
               ))}
