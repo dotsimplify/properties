@@ -11,17 +11,16 @@ const Header = () => {
   const [navBar, setNavBar] = useState(false);
   const [activenavbar, seActivetNavbar] = useState(false);
 
-  const changeBackground = () => {
-    // console.log(window.scrollY);
-    if (window.scrollY >= 520) {
-      seActivetNavbar(true);
-    } else {
-      seActivetNavbar(false);
-    }
-  };
-
   useEffect(() => {
-    window.addEventListener("scroll", changeBackground);
+    const changeBackground = () => {
+      // console.log(window.scrollY);
+      if (window.scrollY >= 520) {
+        seActivetNavbar(true);
+      } else {
+        seActivetNavbar(false);
+      }
+    };
+    window && window.addEventListener("scroll", changeBackground);
     console.log(window.scrollY, "scroll");
   }, [activenavbar]);
 
