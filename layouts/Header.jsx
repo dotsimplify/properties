@@ -7,6 +7,7 @@ import Link from "next/link";
 import Logo from "../components/Icons";
 
 const Header = () => {
+  const router = useRouter();
   const [navBar, setNavBar] = useState(false);
   const [activenavbar, seActivetNavbar] = useState(false);
 
@@ -24,13 +25,10 @@ const Header = () => {
     console.log(window.scrollY, "scroll");
   }, [activenavbar]);
 
-  const routes = useRouter();
-  const pathname = routes.pathname;
-
   return (
     <div
       className={`fixed top-0 left-0 right-0 z-20 ${
-        pathname == "/"
+        router.pathname == "/"
           ? `${activenavbar && `${FooterStyles.headerGradient}`}`
           : `${FooterStyles.headerGradient}`
       }`}
@@ -64,7 +62,7 @@ const Header = () => {
           </div>
         </div>
       </div>
-      <div className={`${navBar ? "" : "hidden"} lg:block`}>
+      <div className={`${navBar ? "" : "hidden "} lg:block`}>
         <div className="flex items-center justify-between px-8 py-2">
           <Link href="/">
             <div className="md:flex hidden justify-start max-w-[300px] w-full">
