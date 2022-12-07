@@ -25,24 +25,28 @@ export default function Home() {
         <div className="relative ">
           <img src="/images/home.png" className="w-full h-screen " />
           <div
-            className={`absolute  lg:px-16 xl:px-32 top-0 left-0 right-0 bottom-0 ${Styles.imageOverlay}`}
+            className={`absolute lg:px-16 xl:px-32 top-0 left-0 right-0 bottom-0 ${Styles.imageOverlay}`}
           >
-            <div className="px-2 mt-36 lg:px-0 lg:mt-48">
+            <div className="px-2 mt-28 lg:px-0 lg:mt-48">
               <h1 className="text-6xl text-white ">Beautiful</h1>
               <h1 className="text-6xl text-white ">homes made</h1>
               <h1 className="text-6xl text-white ">for you</h1>
-              <h3 className="mt-6 text-gray-400 lg:w-1/3 font-firsFont">
+              <h3 className="my-6 text-gray-400 lg:w-1/3 font-firsFont">
                 In oculis quidem se esse admonere interesse enim maxime placeat,
                 facere possimus, omnis. Et quidem faciunt, ut labore et accurate
                 disserendum et harum quidem exercitus quid.
               </h3>
             </div>
           </div>
-          <div className="absolute bottom-0 z-10 px-5 py-3 bg-white left-4 right-4 lg:left-32 lg:px-12 lg:right-32 lg:py-6">
-            <button className={` flex items-center space-x-4  rounded-tr-3xl`}>
-              <h3 className="text-sm font-bold ">See all listings</h3>
+          <div className="absolute bottom-0 z-10 px-5 py-3 bg-white left-4 right-4 lg:left-32 lg:px-12 lg:right-32 lg:py-3">
+            <button
+              className={` flex items-center space-x-4 border bg-buttonColor px-4 py-2`}
+            >
+              <h3 className="text-sm font-bold uppercase text-gray-50 ">
+                See all Properties
+              </h3>
               <FaLongArrowAltRight
-                className={` font-bold text-2xl text-buttonColor`}
+                className={` font-bold text-2xl text-white`}
               />
             </button>
           </div>

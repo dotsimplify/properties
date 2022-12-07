@@ -26,15 +26,17 @@ const Header = () => {
 
   return (
     <div
-      className={`sticky top-0 left-0 right-0 z-40 ${
+      className={`fixed top-0 left-0 right-0 z-40 ${
         router.pathname == "/" && activenavbar
-          ? `${FooterStyles.headerGradient}`
-          : ""
+          ? `${FooterStyles.footerBg}`
+          : `${FooterStyles.headerGradient}`
       }`}
     >
       <div className="block py-2 md:hidden">
         <div className="flex items-center justify-between px-4 py-2 ">
-          <Logo className="w-1/2 h-[50px] " />
+          <Link href="/">
+            <Logo className="w-1/2 h-[50px] " />
+          </Link>
 
           <div
             className="cursor-pointer w-7"
@@ -50,7 +52,7 @@ const Header = () => {
             <div
               className={` h-[2px] ${
                 navBar ? ` hidden` : ``
-              } transform transition duration-500 ease-in-out border-gray-100 bg-gray-100 mt-1`}
+              } transform transition duration-500 ease-in-out border-gray-100 bg-gray-100 my-2`}
             ></div>
             <div
               className={` h-[2px] ${
@@ -60,7 +62,7 @@ const Header = () => {
           </div>
         </div>
       </div>
-      <div className={`${navBar ? "block" : "hidden  "} lg:block`}>
+      <div className={`hidden lg:block`}>
         <div className="flex items-center justify-between px-2 py-2 transition-all duration-500 ease-in-out transform bg-black lg:px-8">
           <Link href="/">
             <div className="md:flex hidden justify-start max-w-[300px] w-full">
@@ -68,9 +70,7 @@ const Header = () => {
             </div>
           </Link>
           <div
-            className={`flex ${
-              navBar ? "flex-row " : "flex-row"
-            } justify-between w-full md:w-auto items-center space-x-6 xl:space-x-16`}
+            className={`flex justify-between w-full md:w-auto items-center space-x-6 xl:space-x-16`}
           >
             {Nav &&
               Nav.length > 0 &&
@@ -78,6 +78,39 @@ const Header = () => {
                 <Link href={item.path} key={index}>
                   <div className={` cursor-pointer  text-white `}>
                     <h3 className="text-xs tracking-wider transition-all duration-500 ease-in-out md:text-base hover:scale-105">
+                      {item.title}
+                    </h3>
+                  </div>
+                </Link>
+              ))}
+            <div>
+              <CustomButton
+                className=" md:px-5 md:mx-8 md:text-base md:py-2 bg-buttonColor"
+                iconColor=" text-white"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className={`${navBar ? "" : "hidden"}`}>
+        <div className="flex items-center justify-between px-2 py-2 transition-all duration-500 ease-in-out transform bg-black lg:px-8">
+          <Link href="/">
+            <div className="md:flex hidden justify-start max-w-[300px] w-full">
+              <Logo className="w-full h-[60px]" />
+            </div>
+          </Link>
+          <div
+            className={`flex  justify-between w-full md:w-auto items-center space-x-6 xl:space-x-16`}
+          >
+            {Nav &&
+              Nav.length > 0 &&
+              Nav.map((item, index) => (
+                <Link href={item.path} key={index}>
+                  <div
+                    onClick={() => setNavBar(false)}
+                    className={` cursor-pointer  text-white `}
+                  >
+                    <h3 className="text-xs tracking-wider transition-all duration-500 ease-in-out select-none md:text-base hover:scale-105">
                       {item.title}
                     </h3>
                   </div>
