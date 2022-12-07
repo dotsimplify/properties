@@ -1,14 +1,14 @@
 export const Nav = [
   {
-    tilte: "Trending",
+    title: "Trending",
     path: "trending",
   },
   {
-    tilte: "Contact",
+    title: "Contact",
     path: "contact-us",
   },
   {
-    tilte: "About",
+    title: "About",
     path: "about-us",
   },
 ];

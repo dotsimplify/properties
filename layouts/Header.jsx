@@ -26,13 +26,13 @@ const Header = () => {
 
   return (
     <div
-      className={`fixed top-0 left-0 right-0 z-20 ${
+      className={`sticky top-0 left-0 right-0 z-40 ${
         router.pathname == "/" && activenavbar
           ? `${FooterStyles.headerGradient}`
           : ""
       }`}
     >
-      <div className="py-2 lg:hidden">
+      <div className="block py-2 md:hidden">
         <div className="flex items-center justify-between px-4 py-2 ">
           <Logo className="w-1/2 h-[50px] " />
 
@@ -60,7 +60,7 @@ const Header = () => {
           </div>
         </div>
       </div>
-      <div className={`${navBar ? "" : "hidden "} lg:block`}>
+      <div className={`${navBar ? "block" : "hidden  "} lg:block`}>
         <div className="flex items-center justify-between px-2 py-2 transition-all duration-500 ease-in-out transform bg-black lg:px-8">
           <Link href="/">
             <div className="md:flex hidden justify-start max-w-[300px] w-full">
@@ -78,7 +78,7 @@ const Header = () => {
                 <Link href={item.path} key={index}>
                   <div className={` cursor-pointer  text-white `}>
                     <h3 className="text-xs tracking-wider transition-all duration-500 ease-in-out md:text-base hover:scale-105">
-                      {item.tilte}
+                      {item.title}
                     </h3>
                   </div>
                 </Link>
